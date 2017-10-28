@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:AppDesign"
+             x:Class="AppDesign.MainPage"
+             Title="Notice">
+    
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Manage" Icon="ic_menu_white_24dp.png" Priority="0"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <Grid ColumnSpacing="0" RowSpacing="0">
+        
+        <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+                <RowDefinition Height="44"/>
+            </Grid.RowDefinitions>
+            <ContentView x:Name="PlaceHolder" Grid.Row="0"/>
+            <BoxView BackgroundColor="#DCDCDC" Grid.Row="1"/>
+       
+        <!--Tab Bar-->
+
+            <Grid ColumnSpacing="0" RowSpacing="0" Grid.Row="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+
+                <!--Tab Items-->
+                <StackLayout Spacing="0" Grid.Column="0" BackgroundColor="#742D82">
+                    <Image HeightRequest="30" Source="ic_notifications_white_24dp.png"/>
+                    <Label Text="Notice" FontSize="10" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="NoticeIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+
+                <StackLayout Spacing="0" Grid.Column="1" BackgroundColor="#742D82">
+                    <Image HeightRequest="30" Source="ic_settings_white_24dp.png"/>
+                    <Label Text="Manage" FontSize="10" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="ManageIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="2" BackgroundColor="#742D82">
+                    <Image HeightRequest="30" Source="ic_add_shopping_cart_white_24dp.png"/>
+                    <Label Text="Manage" FontSize="10" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="BuyIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+                <StackLayout Spacing="0" Grid.Column="3" BackgroundColor="#742D82">
+                    <Image HeightRequest="30" Source="ic_shopping_basket_white_24dp.png"/>
+                    <Label Text="Order" FontSize="10" HorizontalOptions="Center" TextColor="White"/>
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OrderIcon_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                </StackLayout>
+            </Grid>
+        </Grid>
+   
+</ContentPage>
